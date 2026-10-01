@@ -34,11 +34,6 @@ source venv/bin/activate    # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 6. Verify Everything Works
-```bash
-jupyter notebook
-```
-If Jupyter opens in your browser, you're ready to go! 🎉
 
 ## Troubleshooting
 - **pip install fails:** Try upgrading pip first: `pip install --upgrade pip`.
