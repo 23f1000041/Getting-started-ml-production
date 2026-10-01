@@ -1,9 +1,11 @@
 # Workshop Cheatsheet
 
 # Check installs
+```bash
 python --version
 git --version
 docker --version
+```
 
 ## Model Packaging
 ```python
@@ -24,6 +26,7 @@ def health():
 Run: `uvicorn main:app --reload`
 
 ## Git & Deploy
+```bash
 # One-time Git identity setup
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
@@ -40,11 +43,13 @@ git push -u origin main        # Render redeploys automatically on push
 git add -A
 git commit -m "describe what you changed"
 git push
+```
 
-
-# Optional Docker (from inside day1/api, after copying in the bonus Dockerfile)
+# Docker
+```bash
 docker build -t ml-workshop-api .
 docker run -p 8000:8000 ml-workshop-api
+```
 
 ## Testing Your API
 ```bash
