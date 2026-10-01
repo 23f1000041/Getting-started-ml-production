@@ -44,5 +44,4 @@ curl -X POST http://127.0.0.1:8000/predict \
 ## Further Reading
 - [FastAPI docs](https://fastapi.tiangolo.com/)
 - [Docker docs](https://docs.docker.com/get-started/)
-- [Made With ML — MLOps course](https://madewithml.com/)
 - [Google's Rules of ML](https://developers.google.com/machine-learning/guides/rules-of-ml)
