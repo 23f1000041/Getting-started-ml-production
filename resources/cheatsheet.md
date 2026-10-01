@@ -1,5 +1,10 @@
 # Workshop Cheatsheet
 
+# Check installs
+python --version
+git --version
+docker --version
+
 ## Model Packaging
 ```python
 import joblib
@@ -19,11 +24,27 @@ def health():
 Run: `uvicorn main:app --reload`
 
 ## Git & Deploy
-```bash
-git add .
-git commit -m "update"
-git push origin main       # Render redeploys automatically on push
-```
+# One-time Git identity setup
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+# First-time push to a new, empty GitHub repo
+git init
+git add -A
+git commit -m "Initial commit"
+git remote add origin https://github.com/your-username/your-repo-name.git
+git branch -M main
+git push -u origin main        # Render redeploys automatically on push
+
+# Every future update
+git add -A
+git commit -m "describe what you changed"
+git push
+
+
+# Optional Docker (from inside day1/api, after copying in the bonus Dockerfile)
+docker build -t ml-workshop-api .
+docker run -p 8000:8000 ml-workshop-api
 
 ## Testing Your API
 ```bash
